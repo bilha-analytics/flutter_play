@@ -85,7 +85,7 @@ class MainActivity : AppCompatActivity() {
         val txt = findViewById<TextView>(R.id.text_selection)
         val score = findViewById<TextView>(R.id.txt_score)
         txt.text = "Time's up!! Below is your final result. Keep it up!!"
-        txt_score.text = "${points/number_clicks*100} %"
+        txt_score.text = "${points*100/number_clicks} %"
     }
 
     // handle left button click
@@ -143,9 +143,19 @@ class MainActivity : AppCompatActivity() {
             txt.text = "Are you ready? \nLet's get started!!"
         }
 
-        score.text = "Score: $points"
-        but1.text = "${ getNextRandomNumber() }"
-        but2.text = "${ getNextRandomNumber() }"
+        score.text = "Score: $points / $number_clicks"// :: ${points/number_clicks*100}%"
+//        but1.text = "${ getNextRandomNumber() }"
+//        but2.text = "${ getNextRandomNumber() }"
+
+        // force not same number
+        val num1 = getNextRandomNumber()
+        var num2 = num1
+        while ( num1 == num2 ){
+            num2 = getNextRandomNumber()
+        }
+
+        but1.text = "$num1"
+        but2.text = "$num2"
     }
 
     fun getNextRandomNumber() : Int {
