@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Big Number Game"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.065" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="105dp"
+        android:layout_height="110dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        tools:layout_editor_absoluteY="45dp" />
+
+    <TextView
+        android:id="@+id/intro"
+        android:layout_width="368dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="12dp"
+        android:text="How to play: Click to select the larger number to get points"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/left_button"
+        android:layout_width="150dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="272dp"
+        android:onClick="numButtonClick"
+        android:text="Button"
+        app:layout_constraintTop_toBottomOf="@+id/intro"
+        tools:layout_editor_absoluteX="3dp" />
+
+    <Button
+        android:id="@+id/right_button"
+        android:layout_width="145dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginLeft="104dp"
+        android:layout_marginTop="268dp"
+        android:onClick="numButtonClick"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/left_button"
+        app:layout_constraintTop_toBottomOf="@+id/intro" />
+
+    <TextView
+        android:id="@+id/text_selection"
+        android:layout_width="343dp"
+        android:layout_height="144dp"
+        android:layout_marginTop="24dp"
+        android:foregroundGravity="center_vertical"
+        android:gravity="center"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:fontFamily="monospace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intro" />
+
+    <TextView
+        android:id="@+id/txt_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        app:fontFamily="sans-serif-smallcaps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_selection" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
